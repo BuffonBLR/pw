@@ -4,7 +4,7 @@ import { graphql } from 'gatsby'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const HomePage2 = ({data}) => (
+const HomePage3 = ({data}) => (
   <Layout>
     <SEO title="HomePage" />
     <h1>HomePage2</h1>
@@ -14,8 +14,8 @@ const HomePage2 = ({data}) => (
 )
 
 export const query = graphql`
-  query HomePage2Query {
-    allContentfulCategory(limit: 2) {
+  query HomePage3Query {
+    allContentfulCategory(limit: 3) {
       nodes {
         title
         slug
@@ -25,4 +25,4 @@ export const query = graphql`
   }
 `
 
-export default HomePage2
+export default HomePage3
