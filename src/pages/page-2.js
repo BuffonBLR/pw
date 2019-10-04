@@ -9,7 +9,18 @@ const HomePage2 = ({data}) => (
     <SEO title="HomePage" />
     <h1>HomePage2</h1>
     <Link to="/">Go back to the homepage</Link>
-    <p>{JSON.stringify(data)}</p>
+    <ul>
+        {
+            // map over the array here and display your list items
+            (data.allContentfulCategory.nodes).map(function(item, key) {
+                return (
+                <li key={key}>
+                    <span>{item.title}</span>
+                </li>
+                )
+            })
+        }
+    </ul>
   </Layout>
 )
 
